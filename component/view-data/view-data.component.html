@@ -1,0 +1,55 @@
+<div *ngIf="mass" class="alert alert-success  alert-dismissible fade show" role="alert">
+  <strong>Don</strong> ok
+  <button (click)="removemass()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+
+
+<div class="home">
+  <h1 class="text-center text-info display-2 ">  View User</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+    
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+
+        <th>Action</th>
+
+      </tr>
+    </thead>
+
+  </table>
+  
+  <table class="table">
+    <thead class="thead-light">
+      <tr *ngFor="let data of allData">
+
+        <th scope="col">{{data.id}}</th>
+        <th scope="col">{{data.name}}</th>
+      
+        <th><button routerLink="/viewUsers/{{data.id}}" class="btn btn-info">View All Data</button></th>
+        <th>
+          <button  (click)="remove(data.id)" class="btn btn-danger">Delet</button>
+         
+         
+        </th>
+        <th>
+          <button routerLink="/edit/{{data.id}}" class="btn btn-primary">Edit Data</button>
+
+        </th>
+     
+      
+         
+    
+      
+      </tr>
+    </thead>
+ 
+  </table>
+</div>
+

@@ -1,0 +1,51 @@
+<!-- <div *ngIf="mass" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong (click)="ok()">Holy guacamole!</strong> You should check in on some of those fields below.
+  <button (click)="rem()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+
+<h3  class="text-center text-danger display-3 ">  Creat User</h3>
+<div class="homee">
+<div class="home">
+    <div class="container">
+        <form>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              
+              <input required 
+              [style.border]="nameee.valid ? '1px solid green': '1px solid red'"
+              [(ngModel)]="userObject.name" #nameee="ngModel" name="nameee" type="text " id="form2Example1" class="form-control" />
+              <label class="form-label" for="form2Example1">User Name</label>
+            </div>
+          
+            <!-- Password input -->
+            <div *ngIf="nameee.valid" class="form-outline mb-4">
+              <input [(ngModel)]="userObject.phone"  #phonee="ngModel" name="phonee" required type="text" id="form2Example2" class="form-control" />
+              <label class="form-label" for="form2Example2">User Phone</label>
+            </div>
+            <div class="form-outline mb-4">
+                <input [(ngModel)]="userObject.img" #imgg="ngModel" type="url" name="imgg" required id="form2Example2" class="form-control" />
+                <label class="form-label" for="form2Example2">Img</label>
+              </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+          
+          
+            <!-- Submit button -->
+            <div *ngIf="nameee.valid && imgg.valid">
+              <button  (click)="send()" type="submit" class="btn btn-primary btn-block mb-4">Send Data</button>
+
+            </div>
+          
+
+        
+          </form>
+    </div>
+</div>
+</div>
+  
+<div *ngIf="mass" (click) ="ok()" id="toast-container" class="toast-top-right toast-container">
+  <div class="ng-tns-c11-3 ng-star-inserted ng-trigger ng-trigger-flyInOut ngx-toastr toast-success" toast-component="" style="opacity: 1;"><!----><!----><!---->
+    <div role="alert" class="ng-tns-c11-3 toast-message ng-star-inserted" aria-label="Titles are not always needed" style=""> Don </div>
+    <!----><!----></div></div>
